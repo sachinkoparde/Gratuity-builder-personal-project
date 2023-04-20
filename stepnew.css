@@ -310,7 +310,7 @@ header {
     margin-right: 48px;
 
     background-size: 100vmin 100vmin;
-    -webkit-mask: url(Programfiles/Title.png);
+    -webkit-mask: url(https://raw.githubusercontent.com/sachinkoparde/Gratuity-builder-personal-project/main/Programfiles/Title.png);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     animation: rainbow 10s linear infinite;
