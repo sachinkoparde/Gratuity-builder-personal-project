@@ -2132,7 +2132,7 @@ inputs.forEach(function(input, index) {
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 compression: "DEFLATE",
             });
-            const fileName = lname + poc + ".docx"; // generate filename from user's name input
+            const fileName = lname + "-" + poc + ".docx"; // generate filename from user's name input
             saveAs(updatedContent, fileName);
         }
 
