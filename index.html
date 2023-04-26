@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <link rel="shortcut icon" href="Programfiles/Gicon.png" type="image/x-icon">
+
+    <link rel="shortcut icon" href="Programfiles/" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stepnew.css">
 </head>
@@ -19,8 +20,8 @@
         </div>
 
     </header>
-    
-<div class="navcontainer">
+
+    <div class="navcontainer">
         <div class="steps steps li stepmargin">
             <ul>
                 <li class="step-menu1 active">
@@ -38,11 +39,11 @@
             </ul>
         </div>
     </div>
-        
+
 
     <div class="Container">
 
-        
+
 
 
 
@@ -71,17 +72,17 @@
                     </div>
 
                     <div class="single">
-                        <label for="address" class="label"> Division @ appointment </label>
+                        <label for="address" class="label"> Address </label>
                         <input type="text" name="address" id="address" placeholder="Street address" class="form-input mb-3" />
                     </div>
 
                     <div class="input-flex">
                         <div>
-                            <label for="DatA" class="label"> Designation @ appointment </label>
+                            <label for="DatA" class="label"> Designation @  appointment </label>
                             <input type="text" name="DatA" placeholder="Driver" id="DatA" class="form-input" />
                         </div>
                         <div>
-                            <label for="DatR" class="label"> Designation @ appointment </label>
+                            <label for="DatR" class="label"> Designation @ retirement </label>
                             <input type="text" name="DatR" placeholder="Conductor" id="DatR" class="form-input" />
                         </div>
                     </div>
@@ -145,18 +146,49 @@
                     <div class="input-flex">
                         <div>
                             <label for="basicSalary" class="label"> Basic </label>
-                            <input type="number" id="basicSalary" name="basicSalary" min="0" step="0.01" class="form-input" placeholder="Basic">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="basicSalary" name="basicSalary" min="0" step="0.01" class="form-input num" placeholder="Basic">
+                            </div>
+
                         </div>
 
                         <div>
-                            <label for="da" class="label"> Da % </label>
-                            <input type="number" id="da" name="da" min="0" step="0.01" class="form-input" placeholder="DA %">
+                            <label for="da" class="label"> BDA  </label>
+                            <div class="input-group">
+    <span class="input-group-addon">₹</span>
+   <input type="number" id="da" name="da" min="0" step="0.01" class="form-input num" placeholder="BDA %">
+</div>
 
                         </div>
+
+
+
+                        <div>
+                            <label for="hra" class="label"> Hra </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">%</span>
+                                <input type="number" id="hra" name="hra" min="0" step="0.01" class="form-input num" placeholder="HRA ">
+                                <input type="number" id="hrap" name="hrap" min="0" step="0.01" class="invisible" placeholder="HRA percentage">
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="cca" class="label"> CCA </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="cca" name="cca" min="0" step="0.01" class="form-input num" placeholder="CCA">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="input-flex">
 
                         <div>
                             <label for="da" class="label"> Auto Da </label>
-                            <select id="daRet" class="form-input" disabled>
+                            <select id="daRet" class="form-input gray" disabled>
                                 <option value="71">71%</option>
                                 <option value="74">74%</option>
                                 <option value="2.625">2.625%</option>
@@ -195,32 +227,32 @@
                             </select>
 
                         </div>
+                        <div>
+                            <label for="daRet2" class="label">DA on retirement </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="daRet2" name="daRet2" min="0" step="0.01" class="form-input gray num" placeholder="DAret" disabled>
+                            </div>
 
-                        <div>
-                            <label for="hra" class="label"> Hra </label>
-                            <input type="number" id="hra" name="hra" min="0" step="0.01" class="form-input" placeholder="HRA ">
-                        </div>
-                        <div>
-                            <label for="cca" class="label"> Hra </label>
-                            <input type="number" id="cca" name="cca" min="0" step="0.01" class="form-input" placeholder="CCA">
-                        </div>
-                    </div>
-
-                    <div class="single">
-                        <div>
-                            <label for="daRet2" class="label">23 DA on retirement </label>
-                            <input type="number" id="daRet2" name="daRet2" min="0" step="0.01" class="form-input gray" placeholder="DAret" disabled>
                         </div>
                     </div>
 
                     <div class="input-flex">
                         <div>
                             <label for="oneMonthPay" class="label"> One month pay </label>
-                            <input type="text" name="oneMonthPay" id="oneMonthPay" placeholder="One month pay" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" name="oneMonthPay" id="oneMonthPay" placeholder="One month pay" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                         <div>
                             <label for="gratuityEntitled" class="label"> Gratuity entitled </label>
-                            <input type="text" name="gratuityEntitled" id="gratuityEntitled" placeholder="Gratuity entitled" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" name="gratuityEntitled" id="gratuityEntitled" placeholder="Gratuity entitled" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                     </div>
 
@@ -228,8 +260,11 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="ione" class="label"> First </label>
-                            <input type="number" name="ione" id="ione" placeholder="Amount paid" class="form-input" />
+                            <label for="ione" class="label">First</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="ione" id="ione" placeholder="Amount paid" class="form-input num" />
+                            </div>
                         </div>
                         <div>
                             <label for="ionedate" class="label"> Date </label>
@@ -242,7 +277,10 @@
                     <div class="input-flex">
                         <div>
                             <label for="itwo" class="label"> Second </label>
-                            <input type="number" name="itwo" id="itwo" placeholder="Amount paid" class="form-input" />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="itwo" id="itwo" placeholder="Amount paid" class="form-input num" />
+                            </div>
                         </div>
                         <div>
                             <label for="itwodate" class="label"> Date </label>
@@ -255,7 +293,10 @@
                     <div class="input-flex">
                         <div>
                             <label for="ithree" class="label"> Third </label>
-                            <input type="number" name="ithree" id="ithree" placeholder="Amount paid" class="form-input" />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="ithree" id="ithree" placeholder="Amount paid" class="form-input num" />
+                            </div>
                         </div>
                         <div>
                             <label for="ithreedate" class="label"> Date </label>
@@ -268,7 +309,10 @@
                     <div class="input-flex">
                         <div>
                             <label for="ifour" class="label"> Fourth </label>
-                            <input type="number" name="ifour" id="ifour" placeholder="Amount paid" class="form-input" />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="ifour" id="ifour" placeholder="Amount paid" class="form-input num" />
+                            </div>
                         </div>
                         <div>
                             <label for="ifourdate" class="label"> Date </label>
@@ -280,17 +324,26 @@
 
                     <div class="single">
                         <label for="amountpaid" class="label"> Total payment </label>
-                        <input type="text" name="amountpaid" id="amountpaid" placeholder="Amount paid by office" class="form-input gray" disabled />
+                        <div class="input-group">
+                            <span class="input-group-addon">₹</span>
+                            <input type="text" name="amountpaid" id="amountpaid" placeholder="Amount paid by office" class="form-input gray num" disabled />
+                        </div>
                     </div>
 
                     <div class="input-flex">
                         <div>
-                            <label for="gratuityDifference" class="label"> Gratuity </label>
-                            <input type="text" name="gratuityDifference" id="gratuityDifference" placeholder="Difference" class="form-input gray" disabled />
+                            <label for="gratuityDifference" class="label"> Gratuity difference </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" name="gratuityDifference" id="gratuityDifference" placeholder="Difference" class="form-input gray num" disabled />
+                            </div>
                         </div>
                         <div>
-                            <label for="delay" class="label"> Difference </label>
-                            <input type="text" name="delay" id="delay" placeholder="Delay in payment" class="form-input gray" disabled />
+                            <label for="delay" class="label"> Delay </label>
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+                                <input type="text" name="delay" id="delay" placeholder="Delay in payment" class="form-input gray" disabled />
+                            </div>
                         </div>
                     </div>
 
@@ -326,21 +379,37 @@
                     <div class="input-flex">
                         <div>
                             <label for="basicR" class="label"> Basic </label>
-                            <input type="number" id="basicR" name="basicR" min="0" step="0.01" class="form-input" placeholder="Basic">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="basicR" name="basicR" min="0" step="0.01" class="form-input num" placeholder="Basic">
+                            </div>
+
                         </div>
                         <div>
                             <label for="daR" class="label"> DA </label>
-                            <input type="number" id="daR" name="daR" min="0" step="0.01" class="form-input" placeholder="DA">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="daR" name="daR" min="0" step="0.01" class="form-input num" placeholder="DA">
+                            </div>
+
                         </div>
                         <div>
                             <label for="bdaR" class="label"> BDA </label>
-                            <input type="number" id="bdaR" name="bdaR" min="0" step="0.01" class="form-input" placeholder="BDA">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="bdaR" name="bdaR" min="0" step="0.01" class="form-input num" placeholder="BDA">
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="single">
                         <label for="gratuityEntitledR" class="label"> Gratuity </label>
-                        <input type="number" name="gratuityEntitledR" id="gratuityEntitledR" placeholder="Gratuity as per respo" class="form-input mb-3" />
+                        <div class="input-group">
+                            <span class="input-group-addon">₹</span>
+                            <input type="number" name="gratuityEntitledR" id="gratuityEntitledR" placeholder="Gratuity as per respo" class="form-input num" />
+                        </div>
+
                     </div>
 
                     <h4>Balance </h4>
@@ -348,15 +417,27 @@
                     <div class="input-flex">
                         <div>
                             <label for="bal-amt-auto-1" class="label"> One </label>
-                            <input type="number" name="bal-amt-auto-1" id="bal-amt-auto-1" placeholder="Balance 1" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-1" id="bal-amt-auto-1" placeholder="Balance 1" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                         <div>
                             <label for="bal-amt-auto-2" class="label"> Two </label>
-                            <input type="number" name="bal-amt-auto-2" id="bal-amt-auto-2" placeholder="Balance 2" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-2" id="bal-amt-auto-2" placeholder="Balance 2" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                         <div>
                             <label for="bal-amt-auto-3" class="label"> Three </label>
-                            <input type="number" name="bal-amt-auto-3" id="bal-amt-auto-3" placeholder="Balance 3" class="form-input mb-3 gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-3" id="bal-amt-auto-3" placeholder="Balance 3" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                     </div>
 
@@ -481,42 +562,74 @@
                     <div class="input-flex">
                         <div>
                             <label for="basic-as-per-j" class="label"> Basic </label>
-                            <input type="number" id="basic-as-per-j" name="basic" class="form-input" placeholder="Basic">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="basic-as-per-j" name="basic" class="form-input num" placeholder="Basic">
+                            </div>
+
                         </div>
                         <div>
                             <label for="bda-as-per-j" class="label"> BDA </label>
-                            <input type="number" id="bda-as-per-j" name="bda-as-per-j" class="form-input" placeholder="BDA ">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="bda-as-per-j" name="bda-as-per-j" class="form-input num" placeholder="BDA ">
+                            </div>
+
                         </div>
                         <div>
                             <label for="da-as-per-j" class="label"> DA </label>
-                            <input type="number" id="da-as-per-j" name="da-as-per-j" class="form-input" placeholder="DA ">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="da-as-per-j" name="da-as-per-j" class="form-input num" placeholder="DA ">
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="input-flex">
                         <div>
                             <label for="grty-cal-act-auto" class="label"> Gratuity act </label>
-                            <input type="number" name="grty-cal-act-auto" id="grty-cal-act-auto" placeholder="Gratuity by judge" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="grty-cal-act-auto" id="grty-cal-act-auto" placeholder="Gratuity by judge" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                         <div>
                             <label for="grty-cal-reg-auto" class="label"> Gratuity registry </label>
-                            <input type="number" name="grty-cal-reg-auto" id="grty-cal-reg-auto" placeholder="Gratuity as per reg" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="grty-cal-reg-auto" id="grty-cal-reg-auto" placeholder="Gratuity as per reg" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="single">
                         <label for="grty-as-per-j" class="label"> Gratuity entitled </label>
-                        <input type="text" name="grty-as-per-j" id="grty-as-per-j" placeholder="grty-as-per-j" class="form-input gray" disabled />
+                        <div class="input-group">
+                            <span class="input-group-addon">₹</span>
+                            <input type="text" name="grty-as-per-j" id="grty-as-per-j" placeholder="grty-as-per-j" class="form-input gray num" disabled />
+                        </div>
+
                     </div>
 
                     <div class="input-flex">
                         <div>
                             <label for="total-grty-j" class="label"> Total gratuity </label>
-                            <input type="number" name="total-grty-j" id="total-grty-j" placeholder="Total Gratuity" class="form-input" />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="total-grty-j" id="total-grty-j" placeholder="Total Gratuity" class="form-input num" />
+                            </div>
+
                         </div>
                         <div>
                             <label for="grty-diff-j" class="label"> Difference </label>
-                            <input type="number" name="grty-diff-j" id="grty-diff-j" placeholder="Difference" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="grty-diff-j" id="grty-diff-j" placeholder="Difference" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                     </div>
 
@@ -529,30 +642,54 @@
                     <div class="input-flex">
                         <div>
                             <label for="intr-1" class="label"> One </label>
-                            <input type="number" id="intr-1" name="intr-1" min="0" step="0.01" class="form-input gray" placeholder="interest 1" disabled>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-1" name="intr-1" min="0" step="0.01" class="form-input gray num" placeholder="Interest 1" disabled>
+                            </div>
+
                         </div>
                         <div>
                             <label for="intr-2" class="label"> Two </label>
-                            <input type="number" id="intr-2" name="intr-2" min="0" step="0.01" class="form-input gray" placeholder="interest 2" disabled>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-2" name="intr-2" min="0" step="0.01" class="form-input gray num" placeholder="Interest 2" disabled>
+                            </div>
+
                         </div>
                         <div>
                             <label for="intr-3" class="label"> Three </label>
-                            <input type="number" id="intr-3" name="intr-3" min="0" step="0.01" class="form-input gray" placeholder="interest 3" disabled>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-3" name="intr-3" min="0" step="0.01" class="form-input gray num" placeholder="Interest 3" disabled>
+                            </div>
+
                         </div>
                         <div>
                             <label for="intr-4" class="label"> Four </label>
-                            <input type="number" id="intr-4" name="intr-4" min="0" step="0.01" class="form-input gray" placeholder="interest 4" disabled>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-4" name="intr-4" min="0" step="0.01" class="form-input gray num" placeholder="Interest 4" disabled>
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="input-flex">
                         <div>
-                            <label for="total-intr" class="label"> Total interest </label>
-                            <input type="text" name="total-intr" id="total-intr" placeholder="total interest" class="form-input gray" />
+                            <label for="total-intr" class="label"> Total Interest </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" name="total-intr" id="total-intr" placeholder="Total Interest" class="form-input gray num" />
+                            </div>
+
                         </div>
                         <div>
                             <label for="total-grty-intr" class="label"> Gratuity as per order </label>
-                            <input type="text" name="total-grty-intr" id="total-grty-intr" placeholder="total grty order" class="form-input gray" disabled />
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" name="total-grty-intr" id="total-grty-intr" placeholder="Total grty order" class="form-input gray num" disabled />
+                            </div>
+
                         </div>
                     </div>
 
@@ -560,8 +697,8 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="docone" class="label"> One </label>
-                            <input type="text" name="docone" id="docone" placeholder="doc" class="form-input" />
+                            <label for="documentone" class="label"> One </label>
+                            <input type="text" name="documentone" id="documentone" placeholder="Document one" class="form-input" />
                         </div>
                         <div>
                             <label for="doconedate" class="label"> Date </label>
@@ -573,8 +710,8 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="doctwo" class="label"> Two </label>
-                            <input type="text" name="doctwo" id="doctwo" placeholder="Document two" class="form-input">
+                            <label for="documenttwo" class="label"> Two </label>
+                            <input type="text" name="documenttwo" id="documenttwo" placeholder="Document two" class="form-input">
                         </div>
                         <div>
                             <label for="doctwodate" class="label"> Date </label>
@@ -586,8 +723,8 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="docthree" class="label"> Three </label>
-                            <input type="text" name="docthree" id="docthree" placeholder="Document three" class="form-input">
+                            <label for="documentthree" class="label"> Three </label>
+                            <input type="text" name="documentthree" id="documentthree" placeholder="Document three" class="form-input">
                         </div>
                         <div>
                             <label for="docthreedate" class="label"> Date </label>
@@ -599,8 +736,8 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="docfour" class="label"> Four </label>
-                            <input type="text" name="docfour" id="docfour" placeholder="Document four" class="form-input">
+                            <label for="documentfour" class="label"> Four </label>
+                            <input type="text" name="documentfour" id="documentfour" placeholder="Document four" class="form-input">
                         </div>
                         <div>
                             <label for="docfourdate" class="label"> Date </label>
@@ -612,8 +749,8 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="docfive" class="label"> Five </label>
-                            <input type="text" name="docfive" id="docfive" placeholder="Document five" class="form-input">
+                            <label for="documentfive" class="label"> Five </label>
+                            <input type="text" name="documentfive" id="documentfive" placeholder="Document five" class="form-input">
                         </div>
                         <div>
                             <label for="docfivedate" class="label"> Date </label>
@@ -625,8 +762,8 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="docsix" class="label"> Six </label>
-                            <input type="text" name="docsix" id="docsix" placeholder="Document six" class="form-input mb-3">
+                            <label for="documentsix" class="label"> Six </label>
+                            <input type="text" name="documentsix" id="documentsix" placeholder="Document six" class="form-input mb-3">
                         </div>
                         <div>
                             <label for="docsixdate" class="label"> Date </label>
@@ -867,6 +1004,64 @@
         }
 
         dobInput.addEventListener("input", calculateAge);
+        
+        
+     // document prefix
+const inputs = document.querySelectorAll('input[type="text"][id^="document"]');
+
+inputs.forEach(function(input, index) {
+  const prefix = (index + 1) + '. ';
+
+  input.onkeydown = function(event) {
+    const cursorPos = this.selectionStart;
+    if (event.keyCode == 8 && cursorPos <= prefix.length ||  // Backspace key
+        event.keyCode == 46 && cursorPos < prefix.length) {  // Delete key
+      event.preventDefault();
+    }
+  };
+
+  input.oninput = function() {
+    if (this.value.length > 0) {
+      if (!this.value.startsWith(prefix)) {
+        this.value = prefix + this.value;
+      }
+      if (this.value.length > prefix.length) {
+        const firstLetter = this.value.charAt(prefix.length).toUpperCase();
+        const restOfString = this.value.substring(prefix.length + 1);
+        this.value = prefix + firstLetter + restOfString;
+      }
+    }
+  };
+});
+
+
+        
+        
+        // get the input elements by ID
+  const cappnameInput = document.getElementById("pname");
+  const capfnameInput = document.getElementById("fname");
+  const caplnameInput = document.getElementById("lname");
+  const cappocInput = document.getElementById("poc");
+  const caprespondentnameInput = document.getElementById("respondentname");
+  const capjnameInput = document.getElementById("jname");
+  const cappAdvInput = document.getElementById("pAdv");
+  const capresAdvInput = document.getElementById("resAdv");
+
+  // add event listeners to the input elements
+  cappnameInput.addEventListener("input", capitalizeFirstLetter);
+  capfnameInput.addEventListener("input", capitalizeFirstLetter);
+  caplnameInput.addEventListener("input", capitalizeFirstLetter);
+  cappocInput.addEventListener("input", capitalizeFirstLetter);
+  caprespondentnameInput.addEventListener("input", capitalizeFirstLetter);
+  capjnameInput.addEventListener("input", capitalizeFirstLetter);
+  cappAdvInput.addEventListener("input", capitalizeFirstLetter);
+  capresAdvInput.addEventListener("input", capitalizeFirstLetter);
+
+  // function to capitalize the first letter
+  function capitalizeFirstLetter() {
+    this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+  }
+
 
 
         //calculate Age as on date of filing
@@ -1159,7 +1354,7 @@
 
             const daOnRet = (basicSalary + da) * daRetcal / 100;
 
-            document.getElementById("daRet2").value = daOnRet.toFixed(2);
+            document.getElementById("daRet2").value = daOnRet.toFixed(0);
             calculateOneMonthPay();
 
         }
@@ -1177,9 +1372,11 @@
             const hra = Number(document.getElementById("hra").value);
             const cca = Number(document.getElementById("cca").value);
 
-            const oneMonthPay = basicSalary + (da / 100) * basicSalary + daR + (hra / 100) * basicSalary + cca;
+            const oneMonthPay = basicSalary + da + daR + (hra / 100) * basicSalary + cca;
+            const hraper = basicSalary * (hra / 100);
 
-            document.getElementById("oneMonthPay").value = oneMonthPay.toFixed(2);
+            document.getElementById("oneMonthPay").value = oneMonthPay.toFixed(0);
+            document.getElementById("hrap").value = hraper.toFixed(0);
             calculateGratuity()
         }
 
@@ -1209,7 +1406,7 @@
 
             const totalGratuity = gratuity1 + gratuity2 + gratuity3;
 
-            document.getElementById("gratuityEntitled").value = totalGratuity.toFixed(2);
+            document.getElementById("gratuityEntitled").value = totalGratuity.toFixed(0);
             calculateDifference();
         }
 
@@ -1225,7 +1422,7 @@
 
             const AmountR = ionetap + itwotap + ithreetap + ifourtap;
 
-            document.getElementById("amountpaid").value = AmountR.toFixed(2);
+            document.getElementById("amountpaid").value = AmountR.toFixed(0);
             calculateGratuity()
             calculateDifference()
             calJDifference()
@@ -1245,7 +1442,7 @@
 
             const difference = totalGratuity - amountPaid;
 
-            document.getElementById("gratuityDifference").value = difference.toFixed(2);
+            document.getElementById("gratuityDifference").value = difference.toFixed(0);
         }
 
         //document.getElementById("gratuityEntitled").addEventListener("input", calculateDifference);
@@ -1314,7 +1511,7 @@
             //console.log("highG:", highG)
             //console.log("ioneb1:", ioneb1)
 
-            document.getElementById("bal-amt-auto-1").value = bal1.toFixed(2);
+            document.getElementById("bal-amt-auto-1").value = bal1.toFixed(0);
 
             calBal2();
             calculateInterest2();
@@ -1335,7 +1532,7 @@
             const bal2 = secbal1 - itwob2;
 
 
-            document.getElementById("bal-amt-auto-2").value = bal2.toFixed(2);
+            document.getElementById("bal-amt-auto-2").value = bal2.toFixed(0);
             calBal3();
             calculateInterest3();
         }
@@ -1351,7 +1548,7 @@
             const ithreeb3 = Number(document.getElementById("ithree").value);
             const rbal3 = secbal2 - ithreeb3;
 
-            document.getElementById("bal-amt-auto-3").value = rbal3.toFixed(2);
+            document.getElementById("bal-amt-auto-3").value = rbal3.toFixed(0);
             calculateInterest4();
 
         }
@@ -1377,7 +1574,7 @@
     console.log("gratuityM:", gratuityM);
   const GratuityJ = gratuityY + gratuityM;*/
 
-            document.getElementById("grty-cal-act-auto").value = GratuityJ.toFixed(2);
+            document.getElementById("grty-cal-act-auto").value = GratuityJ.toFixed(0);
             compareGratuity();
 
         }
@@ -1407,7 +1604,7 @@
 
             //console.log("RgrtyT: ", RgrtyT);
 
-            document.getElementById("grty-cal-reg-auto").value = RgrtyT.toFixed(2);
+            document.getElementById("grty-cal-reg-auto").value = RgrtyT.toFixed(0);
             compareGratuity()
 
         }
@@ -1462,7 +1659,7 @@
 
             const Jdifference = higherG - JamountPaid;
 
-            document.getElementById("grty-diff-j").value = Jdifference.toFixed(2);
+            document.getElementById("grty-diff-j").value = Jdifference.toFixed(0);
             Totalgty();
         }
 
@@ -1491,7 +1688,7 @@
 
             const Tinterest = interestY + interestM;
 
-            interestInput.value = Tinterest.toFixed(2); // display interest value with 2 decimal places in the read-only input element
+            interestInput.value = Tinterest.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
         }
 
@@ -1523,7 +1720,7 @@
 
             const Tinterest2 = interestY2 + interestM2;
 
-            interest2Input.value = Tinterest2.toFixed(2); // display interest value with 2 decimal places in the read-only input element
+            interest2Input.value = Tinterest2.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
         }
 
@@ -1557,7 +1754,7 @@
 
             const Tinterest3 = interestY3 + interestM3;
 
-            interest3Input.value = Tinterest3.toFixed(2); // display interest value with 2 decimal places in the read-only input element
+            interest3Input.value = Tinterest3.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
         }
 
@@ -1592,7 +1789,7 @@
 
             const Tinterest4 = interestY4 + interestM4;
 
-            interest4Input.value = Tinterest4.toFixed(2); // display interest value with 2 decimal places in the read-only input element
+            interest4Input.value = Tinterest4.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
         }
 
@@ -1614,7 +1811,7 @@
             const interest3Value = parseFloat(interest3.value) || 0;
             const interest4Value = parseFloat(interest4.value) || 0;
             const total = interest1Value + interest2Value + interest3Value + interest4Value;
-            totalInterest.value = total.toFixed(2);
+            totalInterest.value = total.toFixed(0);
             Totalgty();
         }
 
@@ -1629,7 +1826,7 @@
             const gtydifValue = parseFloat(interest1.value) || 0;
             const tintValue = parseFloat(interest2.value) || 0;
             const total2 = gtydifValue + tintValue;
-            totalgty.value = total2.toFixed(2);
+            totalgty.value = total2.toFixed(0);
         }
 
         // Convert YYYY-MM-DD to DD-MM-YYYY
@@ -1679,6 +1876,7 @@
             const basicSalary = document.getElementById("basicSalary").value;
             const da = document.getElementById("da").value;
             const hra = document.getElementById("hra").value;
+            const hrap = document.getElementById("hrap").value;
             const cca = document.getElementById("cca").value;
             const daRet2 = document.getElementById("daRet2").value;
             const daRetdoc = document.getElementById("daRet").value;
@@ -1702,22 +1900,22 @@
             const gratuityDifference = document.getElementById("gratuityDifference").value;
             const delay = document.getElementById("delay").value;
 
-            const docone = document.getElementById("docone").value;
+            const docone = document.getElementById("documentone").value;
             const doconedate = document.getElementById("doconedate-output").value;
 
-            const doctwo = document.getElementById("doctwo").value;
+            const doctwo = document.getElementById("documenttwo").value;
             const doctwodate = document.getElementById("doctwodate-output").value;
 
-            const docthree = document.getElementById("docthree").value;
+            const docthree = document.getElementById("documentthree").value;
             const docthreedate = document.getElementById("docthreedate-output").value;
 
-            const docfour = document.getElementById("docfour").value;
+            const docfour = document.getElementById("documentfour").value;
             const docfourdate = document.getElementById("docfourdate-output").value;
 
-            const docfive = document.getElementById("docfive").value;
+            const docfive = document.getElementById("documentfive").value;
             const docfivedate = document.getElementById("docfivedate-output").value;
 
-            const docsix = document.getElementById("docsix").value;
+            const docsix = document.getElementById("documentsix").value;
             const docsixdate = document.getElementById("docsixdate-output").value;
 
             const caseNo = document.getElementById("caseNo").value;
@@ -1772,7 +1970,9 @@
 
 
 
-
+            const delayY = Number(document.getElementById("delay").value.split(" ")[0]);
+            const delayM = Number(document.getElementById("delay").value.split(" ")[2]);
+            const delayD = Number(document.getElementById("delay").value.split(" ")[4]);
 
 
             const fageY = Number(document.getElementById("filingAge").value.split(" ")[0]);
@@ -1846,6 +2046,7 @@
                 a23: daRetdoc,
 
                 24: hra,
+                a24: hrap,
                 25: cca,
                 26: oneMonthPay,
                 27: gratuityEntitled,
@@ -1860,6 +2061,9 @@
                 36: amountpaid,
                 37: gratuityDifference,
                 38: delay,
+                Y38: delayY,
+                M38: delayM,
+                D38: delayD,
 
                 a39: docone,
                 b39: doconedate,
@@ -1928,7 +2132,7 @@
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 compression: "DEFLATE",
             });
-            const fileName = pname + ".docx"; // generate filename from user's name input
+            const fileName = lname + poc + ".docx"; // generate filename from user's name input
             saveAs(updatedContent, fileName);
         }
 
