@@ -4,7 +4,7 @@
 
     <link rel="shortcut icon" href="Programfiles/" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="step2.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
@@ -16,7 +16,9 @@
             <div class="titlelogo"></div>
         </div>
         <div class="fullscreen">
-            <button id="fullscreen-btn">Fullscreen</button>
+            <button id="fullscreen-btn">
+                <img src="Programfiles\full.svg" alt="Fullscreen" width="17" height="17">
+            </button>
         </div>
 
     </header>
@@ -35,6 +37,10 @@
                 <li class="step-menu3">
                     <span>3</span>
                     Judicial
+                </li>
+                <li class="step-menu4">
+                    <span>4</span>
+                    Payments
                 </li>
             </ul>
         </div>
@@ -78,7 +84,7 @@
 
                     <div class="input-flex">
                         <div>
-                            <label for="DatA" class="label"> Designation @  appointment </label>
+                            <label for="DatA" class="label"> Designation @ appointment </label>
                             <input type="text" name="DatA" placeholder="Driver" id="DatA" class="form-input" />
                         </div>
                         <div>
@@ -154,11 +160,11 @@
                         </div>
 
                         <div>
-                            <label for="da" class="label"> BDA  </label>
+                            <label for="da" class="label"> BDA </label>
                             <div class="input-group">
-    <span class="input-group-addon">₹</span>
-   <input type="number" id="da" name="da" min="0" step="0.01" class="form-input num" placeholder="BDA %">
-</div>
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="da" name="da" min="0" step="0.01" class="form-input num" placeholder="BDA %">
+                            </div>
 
                         </div>
 
@@ -256,96 +262,6 @@
                         </div>
                     </div>
 
-                    <h4>Installments</h4>
-
-                    <div class="input-flex">
-                        <div>
-                            <label for="ione" class="label">First</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">₹</span>
-                                <input type="number" name="ione" id="ione" placeholder="Amount paid" class="form-input num" />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="ionedate" class="label"> Date </label>
-                            <input type="Date" name="ionedate" id="ionedate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('ionedate')" />
-
-                            <input type="text" id="ionedate-output" class="invisible" readonly />
-                        </div>
-                    </div>
-
-                    <div class="input-flex">
-                        <div>
-                            <label for="itwo" class="label"> Second </label>
-                            <div class="input-group">
-                                <span class="input-group-addon">₹</span>
-                                <input type="number" name="itwo" id="itwo" placeholder="Amount paid" class="form-input num" />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="itwodate" class="label"> Date </label>
-                            <input type="Date" name="itwodate" id="itwodate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('itwodate')" />
-
-                            <input type="text" id="itwodate-output" class="invisible" readonly />
-                        </div>
-                    </div>
-
-                    <div class="input-flex">
-                        <div>
-                            <label for="ithree" class="label"> Third </label>
-                            <div class="input-group">
-                                <span class="input-group-addon">₹</span>
-                                <input type="number" name="ithree" id="ithree" placeholder="Amount paid" class="form-input num" />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="ithreedate" class="label"> Date </label>
-                            <input type="Date" name="ithreedate" id="ithreedate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('ithreedate')" />
-
-                            <input type="text" id="ithreedate-output" class="invisible" readonly />
-                        </div>
-                    </div>
-
-                    <div class="input-flex">
-                        <div>
-                            <label for="ifour" class="label"> Fourth </label>
-                            <div class="input-group">
-                                <span class="input-group-addon">₹</span>
-                                <input type="number" name="ifour" id="ifour" placeholder="Amount paid" class="form-input num" />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="ifourdate" class="label"> Date </label>
-                            <input type="Date" name="ifourdate" id="ifourdate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('ifourdate')" />
-
-                            <input type="text" id="ifourdate-output" class="invisible" readonly />
-                        </div>
-                    </div>
-
-                    <div class="single">
-                        <label for="amountpaid" class="label"> Total payment </label>
-                        <div class="input-group">
-                            <span class="input-group-addon">₹</span>
-                            <input type="text" name="amountpaid" id="amountpaid" placeholder="Amount paid by office" class="form-input gray num" disabled />
-                        </div>
-                    </div>
-
-                    <div class="input-flex">
-                        <div>
-                            <label for="gratuityDifference" class="label"> Gratuity difference </label>
-                            <div class="input-group">
-                                <span class="input-group-addon">₹</span>
-                                <input type="text" name="gratuityDifference" id="gratuityDifference" placeholder="Difference" class="form-input gray num" disabled />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="delay" class="label"> Delay </label>
-                            <div class="input-group">
-                                <span class="input-group-addon"></span>
-                                <input type="text" name="delay" id="delay" placeholder="Delay in payment" class="form-input gray" disabled />
-                            </div>
-                        </div>
-                    </div>
 
 
                     <!-- step-1 End div-->
@@ -439,6 +355,14 @@
                             </div>
 
                         </div>
+                        <div>
+                            <label for="bal-amt-auto-4" class="label"> Four </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-4" id="bal-amt-auto-4" placeholder="Balance 4" class="form-input gray num" disabled />
+                            </div>
+
+                        </div>
                     </div>
 
                     <h4>Cheque number </h4>
@@ -493,7 +417,7 @@
                         </div>
                     </div>
 
-                    <div class="single">
+                     <div class="single">
                         <label for="poc" class="label"> Place of court </label>
                         <input type="text" name="poc" id="poc" placeholder="Haveri" class="form-input" />
                     </div>
@@ -679,7 +603,7 @@
                             <label for="total-intr" class="label"> Total Interest </label>
                             <div class="input-group">
                                 <span class="input-group-addon">₹</span>
-                                <input type="text" name="total-intr" id="total-intr" placeholder="Total Interest" class="form-input gray num" />
+                                <input type="text" name="total-intr" id="total-intr" placeholder="Total Interest" class="form-input gray num" disabled />
                             </div>
 
                         </div>
@@ -804,33 +728,189 @@
                     <!-- step-3 End div-->
                 </div>
 
+                <div class="form-step-4">
+
+                    <h4 class="formmargin">Installments</h4>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="ione" class="label">First</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="ione" id="ione" placeholder="Amount paid" class="form-input num" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ionedate" class="label"> Date </label>
+                            <input type="Date" name="ionedate" id="ionedate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('ionedate')" />
+
+                            <input type="text" id="ionedate-output" class="invisible" readonly />
+                        </div>
+                    </div>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="itwo" class="label"> Second </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="itwo" id="itwo" placeholder="Amount paid" class="form-input num" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="itwodate" class="label"> Date </label>
+                            <input type="Date" name="itwodate" id="itwodate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('itwodate')" />
+
+                            <input type="text" id="itwodate-output" class="invisible" readonly />
+                        </div>
+                    </div>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="ithree" class="label"> Third </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="ithree" id="ithree" placeholder="Amount paid" class="form-input num" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ithreedate" class="label"> Date </label>
+                            <input type="Date" name="ithreedate" id="ithreedate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('ithreedate')" />
+
+                            <input type="text" id="ithreedate-output" class="invisible" readonly />
+                        </div>
+                    </div>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="ifour" class="label"> Fourth </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="ifour" id="ifour" placeholder="Amount paid" class="form-input num" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ifourdate" class="label"> Date </label>
+                            <input type="Date" name="ifourdate" id="ifourdate" placeholder="Difference" class="form-input w-45" onchange="convertAndDisplayDate('ifourdate')" />
+
+                            <input type="text" id="ifourdate-output" class="invisible" readonly />
+                        </div>
+                    </div>
+
+                    <div class="single">
+                        <label for="amountpaid" class="label"> Total payment </label>
+                        <div class="input-group">
+                            <span class="input-group-addon">₹</span>
+                            <input type="text" name="amountpaid" id="amountpaid" placeholder="Amount paid by office" class="form-input gray num" disabled />
+                        </div>
+                    </div>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="gratuityDifference" class="label"> Gratuity difference </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" name="gratuityDifference" id="gratuityDifference" placeholder="Difference" class="form-input gray num" disabled />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="delay" class="label"> Delay </label>
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+                                <input type="text" name="delay" id="delay" placeholder="Delay in payment" class="form-input gray" disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Balance </h4>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="bal-amt-auto-1" class="label"> One </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-1" id="bal-amt-auto-1" placeholder="Balance 1" class="form-input gray num" disabled />
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="bal-amt-auto-2" class="label"> Two </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-2" id="bal-amt-auto-2" placeholder="Balance 2" class="form-input gray num" disabled />
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="bal-amt-auto-3" class="label"> Three </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-3" id="bal-amt-auto-3" placeholder="Balance 3" class="form-input gray num" disabled />
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="bal-amt-auto-4" class="label"> Four </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" name="bal-amt-auto-4" id="bal-amt-auto-4" placeholder="Balance 4" class="form-input gray num" disabled />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h4>Interest</h4>
+
+                    <div class="input-flex">
+                        <div>
+                            <label for="intr-1" class="label"> One </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-1" name="intr-1" min="0" step="0.01" class="form-input gray num" placeholder="Interest 1" disabled>
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="intr-2" class="label"> Two </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-2" name="intr-2" min="0" step="0.01" class="form-input gray num" placeholder="Interest 2" disabled>
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="intr-3" class="label"> Three </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-3" name="intr-3" min="0" step="0.01" class="form-input gray num" placeholder="Interest 3" disabled>
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="intr-4" class="label"> Four </label>
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" id="intr-4" name="intr-4" min="0" step="0.01" class="form-input gray num" placeholder="Interest 4" disabled>
+                            </div>
+
+                        </div>
+                    </div>
 
 
+                </div><br><br>
+                
+                <div class="reset-btn">
 
-
-                <div class="form-btn-wrapper">
-                    <button class="back-btn">
-                        Back
-                    </button>
-
-                    <button class="btn">
-                        Next Step
-                    </button>
+                    <input type="reset" value="Reset">
                 </div>
-
-
-
-
-
-
-
             </form><br>
         </div>
 
         <div class="file-box">
             <div class="file-input">
                 <input type="file" id="file-input">
+
                 <label for="file-input">Choose a file</label>
+
             </div>
         </div>
     </div>
@@ -862,61 +942,20 @@
             }
         });
 
+        //steps**************************************************************************
+        // Add event listeners to step menu items
 
         const stepMenuOne = document.querySelector('.step-menu1')
         const stepMenuTwo = document.querySelector('.step-menu2')
         const stepMenuThree = document.querySelector('.step-menu3')
+        const stepMenuFour = document.querySelector('.step-menu4')
 
         const stepOne = document.querySelector('.form-step-1')
         const stepTwo = document.querySelector('.form-step-2')
         const stepThree = document.querySelector('.form-step-3')
-
-        const formSubmitBtn = document.querySelector('.btn')
-        const formBackBtn = document.querySelector('.back-btn')
-
-        formSubmitBtn.addEventListener("click", function(event) {
-            event.preventDefault()
-            if (stepMenuOne.className == 'step-menu1 active') {
-                event.preventDefault()
-
-                stepMenuOne.classList.remove('active')
-                stepMenuTwo.classList.add('active')
-
-                stepOne.classList.remove('active')
-                stepTwo.classList.add('active')
-
-                formBackBtn.classList.add('active')
-                formBackBtn.addEventListener("click", function(event) {
-                    event.preventDefault()
-
-                    stepMenuOne.classList.add('active')
-                    stepMenuTwo.classList.remove('active')
-
-                    stepOne.classList.add('active')
-                    stepTwo.classList.remove('active')
-
-                    formBackBtn.classList.remove('active')
-
-                })
-
-            } else if (stepMenuTwo.className == 'step-menu2 active') {
-                event.preventDefault()
-
-                stepMenuTwo.classList.remove('active')
-                stepMenuThree.classList.add('active')
-
-                stepTwo.classList.remove('active')
-                stepThree.classList.add('active')
-
-                formBackBtn.classList.remove('active')
-                formSubmitBtn.textContent = 'Submit'
-            } else if (stepMenuThree.className == 'step-menu3 active') {
-                document.querySelector('form').submit()
-            }
-        })
+        const stepFour = document.querySelector('.form-step-4')
 
 
-        // Add event listeners to step menu items
         stepMenuOne.addEventListener('click', function() {
             if (stepMenuOne.classList.contains('active')) {
                 return;
@@ -926,12 +965,14 @@
             stepMenuOne.classList.add('active');
             stepMenuTwo.classList.remove('active');
             stepMenuThree.classList.remove('active');
+            stepMenuFour.classList.remove('active');
+
             stepOne.classList.add('active');
             stepTwo.classList.remove('active');
             stepThree.classList.remove('active');
+            stepFour.classList.remove('active');
 
-            // Hide back button on first step
-            formBackBtn.classList.remove('active');
+
         });
 
         stepMenuTwo.addEventListener('click', function() {
@@ -943,12 +984,14 @@
             stepMenuOne.classList.remove('active');
             stepMenuTwo.classList.add('active');
             stepMenuThree.classList.remove('active');
+            stepMenuFour.classList.remove('active');
+
             stepOne.classList.remove('active');
             stepTwo.classList.add('active');
             stepThree.classList.remove('active');
+            stepFour.classList.remove('active');
 
-            // Show back button on second step
-            formBackBtn.classList.add('active');
+
         });
 
         stepMenuThree.addEventListener('click', function() {
@@ -960,13 +1003,35 @@
             stepMenuOne.classList.remove('active');
             stepMenuTwo.classList.remove('active');
             stepMenuThree.classList.add('active');
+            stepMenuFour.classList.remove('active');
+
             stepOne.classList.remove('active');
             stepTwo.classList.remove('active');
             stepThree.classList.add('active');
+            stepFour.classList.remove('active');
 
-            // Hide back button on last step
-            formBackBtn.classList.add('active');
+
         });
+
+        stepMenuFour.addEventListener('click', function() {
+            if (stepMenuFour.classList.contains('active')) {
+                return;
+            }
+
+            // Set active menu item and step
+            stepMenuOne.classList.remove('active');
+            stepMenuTwo.classList.remove('active');
+            stepMenuThree.classList.remove('active');
+            stepMenuFour.classList.add('active');
+
+            stepOne.classList.remove('active');
+            stepTwo.classList.remove('active');
+            stepThree.classList.remove('active');
+            stepFour.classList.add('active');
+
+
+        });
+
 
         // full screen button
 
@@ -975,18 +1040,15 @@
         fullscreenBtn.addEventListener("click", () => {
             if (document.fullscreenElement) {
                 document.exitFullscreen();
-                fullscreenBtn.textContent = "Fullscreen";
+                //fullscreenBtn.textContent = "";
             } else {
                 document.documentElement.requestFullscreen();
-                fullscreenBtn.textContent = "Exit Fullscreen";
+                //fullscreenBtn.textContent = "";
             }
         });
 
 
-
-
-
-        //Calculate Age on dob
+  //Calculate Age on dob
 
 
         const dobInput = document.getElementById("dob");
@@ -1004,63 +1066,63 @@
         }
 
         dobInput.addEventListener("input", calculateAge);
-        
-        
-     // document prefix
-const inputs = document.querySelectorAll('input[type="text"][id^="document"]');
-
-inputs.forEach(function(input, index) {
-  const prefix = (index + 1) + '. ';
-
-  input.onkeydown = function(event) {
-    const cursorPos = this.selectionStart;
-    if (event.keyCode == 8 && cursorPos <= prefix.length ||  // Backspace key
-        event.keyCode == 46 && cursorPos < prefix.length) {  // Delete key
-      event.preventDefault();
-    }
-  };
-
-  input.oninput = function() {
-    if (this.value.length > 0) {
-      if (!this.value.startsWith(prefix)) {
-        this.value = prefix + this.value;
-      }
-      if (this.value.length > prefix.length) {
-        const firstLetter = this.value.charAt(prefix.length).toUpperCase();
-        const restOfString = this.value.substring(prefix.length + 1);
-        this.value = prefix + firstLetter + restOfString;
-      }
-    }
-  };
-});
 
 
-        
-        
+        // document prefix
+        const inputs = document.querySelectorAll('input[type="text"][id^="document"]');
+
+        inputs.forEach(function(input, index) {
+            const prefix = (index + 1) + '. ';
+
+            input.onkeydown = function(event) {
+                const cursorPos = this.selectionStart;
+                if (event.keyCode == 8 && cursorPos <= prefix.length || // Backspace key
+                    event.keyCode == 46 && cursorPos < prefix.length) { // Delete key
+                    event.preventDefault();
+                }
+            };
+
+            input.oninput = function() {
+                if (this.value.length > 0) {
+                    if (!this.value.startsWith(prefix)) {
+                        this.value = prefix + this.value;
+                    }
+                    if (this.value.length > prefix.length) {
+                        const firstLetter = this.value.charAt(prefix.length).toUpperCase();
+                        const restOfString = this.value.substring(prefix.length + 1);
+                        this.value = prefix + firstLetter + restOfString;
+                    }
+                }
+            };
+        });
+
+
+
+
         // get the input elements by ID
-  const cappnameInput = document.getElementById("pname");
-  const capfnameInput = document.getElementById("fname");
-  const caplnameInput = document.getElementById("lname");
-  const cappocInput = document.getElementById("poc");
-  const caprespondentnameInput = document.getElementById("respondentname");
-  const capjnameInput = document.getElementById("jname");
-  const cappAdvInput = document.getElementById("pAdv");
-  const capresAdvInput = document.getElementById("resAdv");
+        const cappnameInput = document.getElementById("pname");
+        const capfnameInput = document.getElementById("fname");
+        const caplnameInput = document.getElementById("lname");
+        const cappocInput = document.getElementById("poc");
+        const caprespondentnameInput = document.getElementById("respondentname");
+        const capjnameInput = document.getElementById("jname");
+        const cappAdvInput = document.getElementById("pAdv");
+        const capresAdvInput = document.getElementById("resAdv");
 
-  // add event listeners to the input elements
-  cappnameInput.addEventListener("input", capitalizeFirstLetter);
-  capfnameInput.addEventListener("input", capitalizeFirstLetter);
-  caplnameInput.addEventListener("input", capitalizeFirstLetter);
-  cappocInput.addEventListener("input", capitalizeFirstLetter);
-  caprespondentnameInput.addEventListener("input", capitalizeFirstLetter);
-  capjnameInput.addEventListener("input", capitalizeFirstLetter);
-  cappAdvInput.addEventListener("input", capitalizeFirstLetter);
-  capresAdvInput.addEventListener("input", capitalizeFirstLetter);
+        // add event listeners to the input elements
+        cappnameInput.addEventListener("input", capitalizeFirstLetter);
+        capfnameInput.addEventListener("input", capitalizeFirstLetter);
+        caplnameInput.addEventListener("input", capitalizeFirstLetter);
+        cappocInput.addEventListener("input", capitalizeFirstLetter);
+        caprespondentnameInput.addEventListener("input", capitalizeFirstLetter);
+        capjnameInput.addEventListener("input", capitalizeFirstLetter);
+        cappAdvInput.addEventListener("input", capitalizeFirstLetter);
+        capresAdvInput.addEventListener("input", capitalizeFirstLetter);
 
-  // function to capitalize the first letter
-  function capitalizeFirstLetter() {
-    this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
-  }
+        // function to capitalize the first letter
+        function capitalizeFirstLetter() {
+            this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+        }
 
 
 
@@ -1071,9 +1133,9 @@ inputs.forEach(function(input, index) {
         const filingageInput = document.getElementById("filingAge");
 
         function calculatefilingAge() {
-            const dob = new Date(dobInput.value);
+            const fdob = new Date(dobInput2.value);
             const dof = new Date(filingDateInput.value);
-            const fdiffTime = dof.getTime() - dob.getTime();
+            const fdiffTime = dof.getTime() - fdob.getTime();
             const fageDate = new Date(fdiffTime);
             const fageYear = fageDate.getUTCFullYear() - 1970;
             const fageMonth = fageDate.getUTCMonth();
@@ -1549,11 +1611,27 @@ inputs.forEach(function(input, index) {
             const rbal3 = secbal2 - ithreeb3;
 
             document.getElementById("bal-amt-auto-3").value = rbal3.toFixed(0);
+            calBal4();
             calculateInterest4();
 
         }
 
         document.getElementById("ithree").addEventListener("input", calBal3);
+
+
+        // 56 Bal amt 4    
+
+        function calBal4() {
+            const thibal3 = Number(document.getElementById("bal-amt-auto-3").value);
+            const ifour4 = Number(document.getElementById("ifour").value);
+            const rbal4 = thibal3 - ifour4;
+
+            document.getElementById("bal-amt-auto-4").value = rbal4.toFixed(0);
+            //calculateInterest4();
+
+        }
+
+        document.getElementById("ifour").addEventListener("input", calBal4);
 
 
         // 53 Grty as per act
@@ -1565,14 +1643,18 @@ inputs.forEach(function(input, index) {
 
             const SyearJ = Number(document.getElementById("service-as-per-j").value.split(" ")[0]);
             const SmonthJ = Number(document.getElementById("service-as-per-j").value.split(" ")[2]);
+            const SdayJ = Number(document.getElementById("service-as-per-j").value.split(" ")[4]);
 
             const gratuityY = ((basicJ + bdaJ + daJ) * SyearJ * 15) / 26;
             const gratuityM = ((basicJ + bdaJ + daJ) * (SmonthJ / 12) * 15) / 26;
+            const gratuityD = ((basicJ + bdaJ + daJ) * (SdayJ / 365) * 15) / 26;
 
-            const GratuityJ = gratuityY + gratuityM;
-            /* console.log("gratuityY:", gratuityY);
-    console.log("gratuityM:", gratuityM);
-  const GratuityJ = gratuityY + gratuityM;*/
+            const GratuityJ = gratuityY + gratuityM + gratuityD;
+
+            //console.log("Grty as per actY:", gratuityY);
+            //console.log("Grty as per actM:", gratuityM);
+            //console.log("Grty as per actD:", gratuityD);
+
 
             document.getElementById("grty-cal-act-auto").value = GratuityJ.toFixed(0);
             compareGratuity();
@@ -1593,14 +1675,17 @@ inputs.forEach(function(input, index) {
 
             const SyearR = Number(document.getElementById("service-as-per-j").value.split(" ")[0]);
             const SmonthR = Number(document.getElementById("service-as-per-j").value.split(" ")[2]);
+            const SdayR = Number(document.getElementById("service-as-per-j").value.split(" ")[4]);
 
             const RgrtyY = (basicReg + bdaReg) * SyearR;
             const RgrtyM = (basicReg + bdaReg) * SmonthR / 12;
+            const RgrtyD = (basicReg + bdaReg) * SdayR / 365;
 
-            //console.log("RgrtyY: ", RgrtyY);
-            //console.log("RgrtyM: ", RgrtyM);
+            /*console.log("Grty as per regY: ", RgrtyY);
+            console.log("Grty as per regM: ", RgrtyM);
+            console.log("Grty as per regD: ", RgrtyD);*/
 
-            const RgrtyT = RgrtyY + RgrtyM;
+            const RgrtyT = RgrtyY + RgrtyM + RgrtyD;
 
             //console.log("RgrtyT: ", RgrtyT);
 
@@ -1644,6 +1729,8 @@ inputs.forEach(function(input, index) {
             const retirementDate = new Date(dateOfRetirement.value);
             const oneMonthAfter = new Date(retirementDate.setMonth(retirementDate.getMonth() + 1));
             oneMonthAfterRetirement.value = oneMonthAfter.toISOString().slice(0, 10);
+
+            //console.log("One month after retirement:", oneMonthAfter);
             calculateInterest();
         }
 
@@ -1680,15 +1767,18 @@ inputs.forEach(function(input, index) {
             const itrageMonth = itrageDate.getUTCMonth();
             const itrageDay = itrageDate.getUTCDate() - 1;
             filingageInput.value = itrageYear + " Years, " + itrageMonth + " Months, " + itrageDay + " Days";
-
+            //console.log("Year: ", itrageYear);
+            //console.log("Month: ", itrageMonth);
+            //console.log("Day: ", itrageDay);
             // Interest calculation
             const principalAmount = Number(principalAmountInput.value);
             const interestY = principalAmount * 0.1 * itrageYear;
             const interestM = principalAmount * 0.1 * itrageMonth / 12;
+            const interestD = principalAmount * 0.1 * itrageDay / 365;
 
-            const Tinterest = interestY + interestM;
+            const Tinterest = interestY + interestM + interestD;
 
-            interestInput.value = Tinterest.toFixed(0); // display interest value with 2 decimal places in the read-only input element
+            interestInput.value = Tinterest.toFixed(0);
             calculateTotalInterest();
         }
 
@@ -1716,9 +1806,10 @@ inputs.forEach(function(input, index) {
             // Interest calculation
             const principalAmount2 = Number(principalAmount2Input.value);
             const interestY2 = principalAmount2 * 0.1 * itrageYear2;
-            const interestM2 = principalAmount2 * 0.1 * itrageYear2 / 12;
+            const interestM2 = principalAmount2 * 0.1 * itrageMonth2 / 12;
+            const interestD2 = principalAmount2 * 0.1 * itrageDay2 / 365;
 
-            const Tinterest2 = interestY2 + interestM2;
+            const Tinterest2 = interestY2 + interestM2 + interestD2;
 
             interest2Input.value = Tinterest2.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
@@ -1750,9 +1841,10 @@ inputs.forEach(function(input, index) {
             // Interest calculation
             const principalAmount3 = Number(principalAmount3Input.value);
             const interestY3 = principalAmount3 * 0.1 * itrageYear3;
-            const interestM3 = principalAmount3 * 0.1 * itrageYear3 / 12;
+            const interestM3 = principalAmount3 * 0.1 * itrageMonth3 / 12;
+            const interestD3 = principalAmount3 * 0.1 * itrageDay3 / 365;
 
-            const Tinterest3 = interestY3 + interestM3;
+            const Tinterest3 = interestY3 + interestM3 + interestD3;
 
             interest3Input.value = Tinterest3.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
@@ -1785,9 +1877,10 @@ inputs.forEach(function(input, index) {
             // Interest calculation
             const principalAmount4 = Number(principalAmount4Input.value);
             const interestY4 = principalAmount4 * 0.1 * itrageYear4;
-            const interestM4 = principalAmount4 * 0.1 * itrageYear4 / 12;
+            const interestM4 = principalAmount4 * 0.1 * itrageMonth4 / 12;
+            const interestD4 = principalAmount4 * 0.1 * itrageMonth4 / 365;
 
-            const Tinterest4 = interestY4 + interestM4;
+            const Tinterest4 = interestY4 + interestM4 + interestD4;
 
             interest4Input.value = Tinterest4.toFixed(0); // display interest value with 2 decimal places in the read-only input element
             calculateTotalInterest();
@@ -1799,19 +1892,20 @@ inputs.forEach(function(input, index) {
 
         // 76 Total Interest
 
-        const interest1 = document.getElementById('intr-1');
-        const interest2 = document.getElementById('intr-2');
-        const interest3 = document.getElementById('intr-3');
-        const interest4 = document.getElementById('intr-4');
-        const totalInterest = document.getElementById('total-intr');
+        const ttinterest1 = document.getElementById('intr-1');
+        const ttinterest2 = document.getElementById('intr-2');
+        const ttinterest3 = document.getElementById('intr-3');
+        const ttinterest4 = document.getElementById('intr-4');
+        const tttotalInterest = document.getElementById('total-intr');
+
 
         function calculateTotalInterest() {
-            const interest1Value = parseFloat(interest1.value) || 0;
-            const interest2Value = parseFloat(interest2.value) || 0;
-            const interest3Value = parseFloat(interest3.value) || 0;
-            const interest4Value = parseFloat(interest4.value) || 0;
-            const total = interest1Value + interest2Value + interest3Value + interest4Value;
-            totalInterest.value = total.toFixed(0);
+            const ttinterest1Value = parseFloat(ttinterest1.value) || 0;
+            const ttinterest2Value = parseFloat(ttinterest2.value) || 0;
+            const ttinterest3Value = parseFloat(ttinterest3.value) || 0;
+            const ttinterest4Value = parseFloat(ttinterest4.value) || 0;
+            const total = ttinterest1Value + ttinterest2Value + ttinterest3Value + ttinterest4Value;
+            tttotalInterest.value = total.toFixed(0);
             Totalgty();
         }
 
@@ -1823,8 +1917,8 @@ inputs.forEach(function(input, index) {
         const totalgty = document.getElementById('total-grty-intr');
 
         function Totalgty() {
-            const gtydifValue = parseFloat(interest1.value) || 0;
-            const tintValue = parseFloat(interest2.value) || 0;
+            const gtydifValue = parseFloat(gtydif.value) || 0;
+            const tintValue = parseFloat(tint.value) || 0;
             const total2 = gtydifValue + tintValue;
             totalgty.value = total2.toFixed(0);
         }
@@ -1880,7 +1974,7 @@ inputs.forEach(function(input, index) {
             const cca = document.getElementById("cca").value;
             const daRet2 = document.getElementById("daRet2").value;
             const daRetdoc = document.getElementById("daRet").value;
-            console.log("daRet: ", daRetdoc);
+            //console.log("daRet: ", daRetdoc);
             const oneMonthPay = document.getElementById("oneMonthPay").value;
             const gratuityEntitled = document.getElementById("gratuityEntitled").value;
 
@@ -2132,9 +2226,10 @@ inputs.forEach(function(input, index) {
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 compression: "DEFLATE",
             });
-            const fileName = lname + "-" + poc + ".docx"; // generate filename from user's name input
+            const fileName = lname + "-" + "Grty" + ".docx"; // generate filename from user's name input
             saveAs(updatedContent, fileName);
         }
+        
 
         const fileInput = document.getElementById("file-input");
         fileInput.addEventListener("change", function() {
@@ -2143,6 +2238,7 @@ inputs.forEach(function(input, index) {
             reader.onload = function() {
                 const content = reader.result;
                 generate(content);
+                fileInput.value = null;
             };
             reader.readAsBinaryString(file);
         });
