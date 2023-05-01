@@ -20,8 +20,8 @@
                 <img src="Programfiles\full.svg" alt="Fullscreen" width="17" height="17">
             </button>
         </div>
-        
-        
+
+
 
     </header>
 
@@ -98,8 +98,20 @@
 
 
                     <div class="single">
-                        <label for="DivatR" class="label"> Division @ retirement </label>
-                        <input type="text" name="DivatR" id="DivatR" placeholder="Hubbali division" class="form-input" />
+                        <label for="DivatR" class="label">Division @ retirement</label>
+                        <select id="DivatR" name="DivatR" class="form-input" onchange="updateShortForm()">
+                            <option value="Bagalkot">Bagalkot</option>
+                            <option value="Belagavi">Belagavi</option>
+                            <option value="Chikodi">Chikodi</option>
+                            <option value="Dharwad">Dharwad</option>
+                            <option value="Hubballi">Hubballi</option>
+                            <option value="Hubballi-Rural">Hubballi-Rural</option>
+                            <option value="Haveri">Haveri</option>
+                            <option value="Gadag">Gadag</option>
+                            <option value="Uttara-Kannada/Sirsi">Uttara-Kannada/Sirsi</option>
+                        </select>
+
+                        <input type="text" id="shortform" class="invisible" readonly>
                     </div>
 
                     <div class="input-flex">
@@ -829,16 +841,16 @@
 
                 </div><br><br>
 
-                
+
 
                 <div class="file-box2">
-            <div class="file-input2">
-                <input type="reset" id="file-input2">
-                <label for="file-input2" style="display: flex; align-items: center;">
-                    <img src="Programfiles\Reset.svg" style="margin-top: 0px; padding-right: 7px;"> Reset
-                </label>
-            </div>
-        </div>
+                    <div class="file-input2">
+                        <input type="reset" id="file-input2">
+                        <label for="file-input2" style="display: flex; align-items: center;">
+                            <img src="Programfiles\Reset.svg" style="margin-top: 0px; padding-right: 7px;"> Reset
+                        </label>
+                    </div>
+                </div>
 
 
             </form>
@@ -1035,6 +1047,49 @@
                 }
             };
         });
+
+
+        //select shortform
+        function updateShortForm() {
+            var pocSelect = document.getElementById("DivatR");
+            var shortFormInput = document.getElementById("shortform");
+
+            var selectedOption = pocSelect.value;
+            var shortForm = "";
+
+            switch (selectedOption) {
+                case "Bagalkot":
+                    shortForm = "BGK";
+                    break;
+                case "Belagavi":
+                    shortForm = "BGM";
+                    break;
+                case "Chikodi":
+                    shortForm = "CKD";
+                    break;
+                case "Dharwad":
+                    shortForm = "DWR";
+                    break;
+                case "Hubballi":
+                    shortForm = "HBL";
+                    break;
+                case "Hubballi-Rural":
+                    shortForm = "HBL(R)";
+                    break;
+                case "Haveri":
+                    shortForm = "HVR";
+                    break;
+                case "Gadag":
+                    shortForm = "GDG";
+                    break;
+                case "Uttara-Kannada/Sirsi":
+                    shortForm = "UK";
+                    break;
+
+            }
+
+            shortFormInput.value = shortForm;
+        }
 
 
 
@@ -1889,6 +1944,7 @@
             const DatA = document.getElementById("DatA").value;
             const DatR = document.getElementById("DatR").value;
             const DivatR = document.getElementById("DivatR").value;
+            const shortform = document.getElementById("shortform").value;
             const poc = document.getElementById("poc").value;
             const dobp = document.getElementById("dob-output").value;
             const filingAge = document.getElementById("filingAge").value;
@@ -2166,7 +2222,7 @@
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 compression: "DEFLATE",
             });
-            const fileName = lname + "-" + "Grty" + ".docx"; // generate filename from user's name input
+            const fileName = lname + "-" + shortform + "-" + "Grty" + ".docx"; // generate filename from user's name input
             saveAs(updatedContent, fileName);
         }
 
