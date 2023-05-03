@@ -67,7 +67,7 @@
                     <div class="input-flex formmargin">
                         <div>
                             <label for="pname" class="label"> First name </label>
-                            <input type="text" name="pname" placeholder="Name" id="pname" class="form-input" />
+                            <input type="text" name="pname" placeholder="Name" id="pname" class="form-input" required />
                         </div>
                         <div>
                             <label for="fname" class="label"> Middle name </label>
@@ -100,6 +100,7 @@
                     <div class="single">
                         <label for="DivatR" class="label">Division @ retirement</label>
                         <select id="DivatR" name="DivatR" class="form-input" onchange="updateShortForm()">
+                            <option value="Select">Select division</option>
                             <option value="Bagalkot">Bagalkot</option>
                             <option value="Belagavi">Belagavi</option>
                             <option value="Chikodi">Chikodi</option>
@@ -231,7 +232,7 @@
                                 <option value="21">21%</option>
                                 <option value="25.25">25.25%</option>
                                 <option value="28.75">28.75%</option>
-                                <option value="32.50">32.50%</option>
+                                <option value="32.5">32.5%</option>
                                 <option value="36">36%</option>
                                 <option value="40.25">40.25%</option>
                                 <option value="43.25">43.25%</option>
@@ -1130,6 +1131,21 @@
         function calculatefilingAge() {
             const fdob = new Date(dobInput2.value);
             const dof = new Date(filingDateInput.value);
+
+            if (isNaN(fdob.getTime())) {
+                filingageInput.value = "DOB is missing";
+                filingageInput.style.color = "red";
+                return;
+            }
+
+            if (isNaN(dof.getTime())) {
+                filingageInput.value = "Filing Date is missing";
+                filingageInput.style.color = "red";
+                return;
+            }
+
+            filingageInput.style.color = ""; // Reset to the default text color
+
             const fdiffTime = dof.getTime() - fdob.getTime();
             const fageDate = new Date(fdiffTime);
             const fageYear = fageDate.getUTCFullYear() - 1970;
@@ -1259,7 +1275,7 @@
             {
                 startDate: new Date('2015-07-01'),
                 endDate: new Date('2015-12-31'),
-                rate: 32.50
+                rate: 32.5
             },
             {
                 startDate: new Date('2016-01-01'),
@@ -1331,6 +1347,7 @@
             const daRate = daRet.find((daRate) => retirementDate >= daRate.startDate && retirementDate < daRate.endDate);
             if (daRate) {
                 daRateSelect.value = daRate.rate;
+                console.log('Selected DA Rate:', daRate.rate);
             } else {
                 // handle error: retirement date is outside of available DA rates
             }
@@ -1342,12 +1359,14 @@
         //delay in payment
 
         const rdateInput = document.getElementById("next-ret");
-        const ionedatedelayInput = document.getElementById("ionedate");
+        const ionedatedelayInput = document.getElementById("ifourdate");
         const delayInput = document.getElementById("delay");
 
         function calculatedelay() {
             const rdate = new Date(rdateInput.value);
             const ionedatedelay = new Date(ionedatedelayInput.value);
+
+            
 
             const ddiffTime = ionedatedelay.getTime() - rdate.getTime();
             const dageDate = new Date(ddiffTime);
@@ -1377,6 +1396,8 @@
             const ret = new Date(retInput.value);
 
             const appCon = new Date(appConInput.value);
+ 
+
             const cdiffTime = ret.getTime() - appCon.getTime();
             const cageDate = new Date(cdiffTime);
             const cageYear = cageDate.getUTCFullYear() - 1970;
@@ -1506,26 +1527,7 @@
         //document.getElementById("amountpaid").addEventListener("input", calculateDifference);      
 
 
-        // 38 Delay in payment
-
-        const ifourdateInput = document.getElementById("ifourdate");
-        const retdateInput = document.getElementById("dateOfRetirement");
-        const delayageInput = document.getElementById("delay");
-
-        function calculateDelay() {
-            const ifourdate = new Date(ifourdateInput.value);
-            const retdate = new Date(retdateInput.value);
-            const delayTime = ifourdate.getTime() - retdate.getTime();
-            const delayDate = new Date(delayTime);
-            const delayYear = delayDate.getUTCFullYear() - 1970;
-            const delayMonth = delayDate.getUTCMonth();
-            const delayDay = delayDate.getUTCDate() - 1;
-            delayageInput.value = delayYear + " Years, " + delayMonth + " Months, " + delayDay + " Days";
-
-        }
-
-        ifourdateInput.addEventListener("input", calculateDelay);
-        retdateInput.addEventListener("input", calculateDelay);
+        
 
 
         // 66 Total service J 
