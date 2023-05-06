@@ -100,7 +100,7 @@
                     <div class="single">
                         <label for="DivatR" class="label">Division @ retirement</label>
                         <select id="DivatR" name="DivatR" class="form-input" onchange="updateShortForm()">
-                            <option value="Select">Select division</option>
+                            <option style="background: #dfe7ff;color:#4e46e5;">Select division</option>
                             <option value="Bagalkot">Bagalkot</option>
                             <option value="Belagavi">Belagavi</option>
                             <option value="Chikodi">Chikodi</option>
@@ -1184,12 +1184,12 @@
             },
             {
                 startDate: new Date('2007-01-01'),
-                endDate: new Date('2007-12-31'),
+                endDate: new Date('2007-06-30'),
                 rate: 12.25
             },
             {
                 startDate: new Date('2007-07-01'),
-                endDate: new Date('2008-06-30'),
+                endDate: new Date('2007-12-31'),
                 rate: 17.5
             },
             {
@@ -1366,7 +1366,7 @@
             const rdate = new Date(rdateInput.value);
             const ionedatedelay = new Date(ionedatedelayInput.value);
 
-            
+
 
             const ddiffTime = ionedatedelay.getTime() - rdate.getTime();
             const dageDate = new Date(ddiffTime);
@@ -1396,7 +1396,7 @@
             const ret = new Date(retInput.value);
 
             const appCon = new Date(appConInput.value);
- 
+
 
             const cdiffTime = ret.getTime() - appCon.getTime();
             const cageDate = new Date(cdiffTime);
@@ -1527,7 +1527,7 @@
         //document.getElementById("amountpaid").addEventListener("input", calculateDifference);      
 
 
-        
+
 
 
         // 66 Total service J 
