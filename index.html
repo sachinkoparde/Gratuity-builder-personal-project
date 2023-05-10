@@ -3,7 +3,7 @@
 <head>
 
     <link rel="shortcut icon" href="Programfiles/" type="image/x-icon">
-    <link rel="icon" href="Programfiles/Fivi.svg" type="image/svg+xml">
+    <link rel="icon" href="Programfiles/fivi.svg" type="image/svg+xml">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -19,6 +19,10 @@
             <button id="fullscreen-btn">
                 <img src="Programfiles\full.svg" alt="Fullscreen" width="17" height="17">
             </button>
+            <a href="https://index-oiea.glide.page/dl/6471c6" class="linkbutton">
+  <img src="Programfiles\info.svg" alt="Fullscreen" width="17" height="17">
+</a>
+
         </div>
 
 
@@ -100,7 +104,7 @@
                     <div class="single">
                         <label for="DivatR" class="label">Division @ retirement</label>
                         <select id="DivatR" name="DivatR" class="form-input" onchange="updateShortForm()">
-                            <option style="background: #dfe7ff;color:#4e46e5;">Select division</option>
+                            <option style="Select division">Select division</option>
                             <option value="Bagalkot">Bagalkot</option>
                             <option value="Belagavi">Belagavi</option>
                             <option value="Chikodi">Chikodi</option>
@@ -880,7 +884,8 @@
 
     </header>
 
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.36.1/docxtemplater.js"></script>
     <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
@@ -1477,7 +1482,7 @@
 
 
 
-            const totalGratuity = gratuity1 + gratuity2 + gratuity3;
+            const totalGratuity = gratuity1 + gratuity2;
 
             document.getElementById("gratuityEntitled").value = totalGratuity.toFixed(0);
             calculateDifference();
