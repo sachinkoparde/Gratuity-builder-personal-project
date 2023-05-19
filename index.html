@@ -3,7 +3,7 @@
 <head>
 
     <link rel="shortcut icon" href="Programfiles/" type="image/x-icon">
-    <link rel="icon" href="Programfiles/Fivi.svg" type="image/svg+xml">
+    <link rel="icon" href="Programfiles/fivi.svg" type="image/svg+xml">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -20,7 +20,7 @@
                 <img src="Programfiles\full.svg" alt="Fullscreen" width="17" height="17">
             </button>
             <a href="https://index-oiea.glide.page/dl/6471c6" class="linkbutton">
-  <img src="Programfiles\Info.svg" alt="Fullscreen" width="17" height="17">
+  <img src="Programfiles\info.svg" alt="Fullscreen" width="17" height="17">
 </a>
 
         </div>
@@ -1482,7 +1482,7 @@
 
 
 
-            const totalGratuity = gratuity1 + gratuity2;
+            const totalGratuity = gratuity1 + gratuity2 + gratuity3;
 
             document.getElementById("gratuityEntitled").value = totalGratuity.toFixed(0);
             calculateDifference();
@@ -1646,7 +1646,7 @@
             const gratuityM = ((basicJ + bdaJ + daJ) * (SmonthJ / 12) * 15) / 26;
             const gratuityD = ((basicJ + bdaJ + daJ) * (SdayJ / 365) * 15) / 26;
 
-            const GratuityJ = gratuityY + gratuityM + gratuityD;
+            const GratuityJ = gratuityY + gratuityM;
 
             //console.log("Grty as per actY:", gratuityY);
             //console.log("Grty as per actM:", gratuityM);
@@ -1682,7 +1682,7 @@
             console.log("Grty as per regM: ", RgrtyM);
             console.log("Grty as per regD: ", RgrtyD);*/
 
-            const RgrtyT = RgrtyY + RgrtyM + RgrtyD;
+            const RgrtyT = RgrtyY + RgrtyM;
 
             //console.log("RgrtyT: ", RgrtyT);
 
